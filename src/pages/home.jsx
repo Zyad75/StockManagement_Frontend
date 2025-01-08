@@ -8,6 +8,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get("http://localhost:3000/products");
+
         console.log(response.data);
         setData(response.data);
         setIsLoading(false);
@@ -40,19 +41,18 @@ const Home = () => {
                   <div className="divInfosProduct">
                     <p className="nameProduct">{elem.name}</p>
                     <p className="nameProduct">{elem.price} €</p>
-                    <div className="divAvailability">
-                      {elem.quantity === 0 && (
-                        <p className="noQuantity"> Out of stock !</p>
-                      )}
-                      {elem.quantity > 0 && elem.quantity < 3 && (
-                        <p className="littleQuantity">
-                          Hurry Up ! Only {elem.quantity} left
-                        </p>
-                      )}
-                      {elem.quantity >= 3 && (
-                        <p className="muchQuantity">Available In stock</p>
-                      )}
-                    </div>
+
+                    {elem.quantity === 0 && (
+                      <p className="noQuantity"> Out of stock !</p>
+                    )}
+                    {elem.quantity > 0 && elem.quantity < 3 && (
+                      <p className="littleQuantity">
+                        Hurry Up ! Only {elem.quantity} left
+                      </p>
+                    )}
+                    {elem.quantity >= 3 && (
+                      <p className="muchQuantity">Available In stock</p>
+                    )}
                   </div>
                 </div>
               </>

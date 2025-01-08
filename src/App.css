@@ -9,9 +9,75 @@ p {
 
 /*----------------------------------------------*/
 /*----------------------------------------------*/
+/*------ Header CSS  ---------*/
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+
+header {
+  line-height: 100px;
+  background-color: #5c47d2;
+  border-bottom: solid 3px rgb(90, 7, 132);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+}
+.buttonShopIcon {
+  background-color: #5c47d2;
+  border: none;
+}
+.buttonShopIcon:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.shopIcon {
+  color: whitesmoke;
+  height: 30px;
+}
+.buttonAddProduct {
+  color: #5c47d2;
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: solid white 2px;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+  height: 30px;
+  font-family: "Kanit";
+}
+
+.buttonAddProduct:hover {
+  background-color: #5c47d2;
+  color: white;
+  cursor: pointer;
+  .iconAddProduct {
+    color: white;
+  }
+}
+.iconAddProduct {
+  color: #5c47d2;
+}
+
+.titleHeader {
+  color: white;
+  font-weight: 700;
+  font-size: 26px;
+  text-align: center;
+}
+/*----------------------------------------------*/
+/*----------------------------------------------*/
 /*------ Home page CSS  ---------*/
 /*----------------------------------------------*/
 /*----------------------------------------------*/
+
 .divAllProducts {
   margin: 0 auto;
   margin: 15%;
@@ -24,34 +90,39 @@ p {
   height: 200px;
   width: 200px;
   border-radius: 5px;
+  box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 0.8);
 }
 .divProduct {
-  background-color: rgb(134, 244, 242);
+  background-color: #5c47d2;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 2.5%;
+  border-radius: 6px;
 }
 .divProductNoStock {
-  background-color: rgb(134, 244, 242);
+  background-color: #5c47d2;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 2.5%;
   opacity: 0.4;
+  border-radius: 6px;
 }
 .nameProduct {
   margin-left: 5px;
   color: black;
 }
 .divInfosProduct {
-  background-color: whitesmoke;
+  background-color: white;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding: 5px;
+  box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 0.8);
 }
+
 .divAvailability {
   display: flex;
   gap: 5px;
@@ -62,7 +133,9 @@ p {
 }
 .littleQuantity {
   color: orange;
+  opacity: 0.6;
 }
 .muchQuantity {
   color: green;
+  opacity: 0.6;
 }
