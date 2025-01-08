@@ -32,7 +32,37 @@ p {
   gap: 10px;
   padding: 2.5%;
 }
+.divProductNoStock {
+  background-color: rgb(134, 244, 242);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 2.5%;
+  opacity: 0.4;
+}
 .nameProduct {
   margin-left: 5px;
   color: black;
+}
+.divInfosProduct {
+  background-color: whitesmoke;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+}
+.divAvailability {
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+}
+.noQuantity {
+  color: red;
+}
+.littleQuantity {
+  color: orange;
+}
+.muchQuantity {
+  color: green;
 }

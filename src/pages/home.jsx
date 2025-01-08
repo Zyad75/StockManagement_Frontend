@@ -26,14 +26,34 @@ const Home = () => {
           {data.map((elem, index) => {
             return (
               <>
-                <div className="divProduct">
+                <div
+                  className={
+                    elem.quantity !== 0 ? "divProduct" : "divProductNoStock"
+                  }
+                >
                   <img
                     key={index}
                     src={elem.image.secure_url}
                     alt="productImage"
                     className="productImage"
                   />
-                  <p className="nameProduct">{elem.name}</p>
+                  <div className="divInfosProduct">
+                    <p className="nameProduct">{elem.name}</p>
+                    <p className="nameProduct">{elem.price} €</p>
+                    <div className="divAvailability">
+                      {elem.quantity === 0 && (
+                        <p className="noQuantity"> Out of stock !</p>
+                      )}
+                      {elem.quantity > 0 && elem.quantity < 3 && (
+                        <p className="littleQuantity">
+                          Hurry Up ! Only {elem.quantity} left
+                        </p>
+                      )}
+                      {elem.quantity >= 3 && (
+                        <p className="muchQuantity">Available In stock</p>
+                      )}
+                    </div>
+                  </div>
                 </div>
               </>
             );
