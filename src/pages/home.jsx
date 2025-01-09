@@ -20,7 +20,7 @@ const Home = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [data]);
   return isLoading ? (
     <span>En cours de chargement...</span>
   ) : (
@@ -53,19 +53,38 @@ const Home = () => {
                         <FontAwesomeIcon icon="fa-solid fa-pencil" />
                       </button>
                     </div>
+                    <p className="brandProduct">{elem.brand}</p>
                     <p className="nameProduct">{elem.price} €</p>
-
-                    {elem.quantity === 0 && (
-                      <p className="noQuantity"> Out of stock !</p>
-                    )}
-                    {elem.quantity > 0 && elem.quantity < 3 && (
-                      <p className="littleQuantity">
-                        Hurry Up ! Only {elem.quantity} left
-                      </p>
-                    )}
-                    {elem.quantity >= 3 && (
-                      <p className="muchQuantity">Available In stock</p>
-                    )}
+                    <div className="divAvailabilityAndDeleteButton">
+                      {elem.quantity === 0 && (
+                        <p className="noQuantity"> Out of stock !</p>
+                      )}
+                      {elem.quantity > 0 && elem.quantity < 3 && (
+                        <p className="littleQuantity">
+                          Only {elem.quantity} left
+                        </p>
+                      )}
+                      {elem.quantity >= 3 && (
+                        <p className="muchQuantity">Available In stock</p>
+                      )}
+                      <button
+                        className="deleteButton"
+                        onClick={async () => {
+                          const id = elem._id;
+                          try {
+                            const response = await axios.delete(
+                              `http://localhost:3000/delete/${id}`
+                            );
+                            alert(JSON.stringify(response.data));
+                            navigate("/");
+                          } catch (error) {
+                            console.log(error);
+                          }
+                        }}
+                      >
+                        <FontAwesomeIcon icon="fa-solid fa-trash" />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </>

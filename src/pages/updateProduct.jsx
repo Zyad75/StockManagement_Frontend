@@ -45,6 +45,7 @@ const UpdateProduct = () => {
           />
           <p>{data.name}</p>
           <p>{data.price} €</p>
+          <p>Quantity : {data.quantity}</p>
         </div>
         <button
           onClick={() => {

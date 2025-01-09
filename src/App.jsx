@@ -1,7 +1,12 @@
 //------------ Styles et autres -------------//
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faShop, faPlus, faPencil } from "@fortawesome/free-solid-svg-icons";
-library.add(faShop, faPlus, faPencil);
+import {
+  faShop,
+  faPlus,
+  faPencil,
+  faTrash,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faShop, faPlus, faPencil, faTrash);
 import "./App.css";
 //------------- Imports des pages/composants --------//
 import Header from "./components/header";
