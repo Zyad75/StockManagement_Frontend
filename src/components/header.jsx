@@ -13,7 +13,7 @@ const Header = () => {
         >
           <FontAwesomeIcon icon="fa-solid fa-shop" className="shopIcon" />
         </button>
-        <p className="titleHeader">Stock-Management</p>
+        <p className="titleHeader">Stock - Management</p>
         <Link to={"/addProduct"} className="buttonAddProduct">
           <FontAwesomeIcon icon="fa-solid fa-plus" className="iconAddProduct" />
           <p className="textAddProduct">add Product</p>{" "}

@@ -80,7 +80,7 @@ header {
 
 .divAllProducts {
   margin: 0 auto;
-  margin: 15%;
+  margin: 10%;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -88,6 +88,7 @@ header {
 }
 .productImage {
   height: 200px;
+  object-fit: cover;
   width: 200px;
   border-radius: 5px;
   box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 0.8);
@@ -96,14 +97,17 @@ header {
   background-color: #5c47d2;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 10px;
   padding: 2.5%;
   border-radius: 6px;
+  box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 0.8);
 }
 .divProductNoStock {
   background-color: #5c47d2;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 10px;
   padding: 2.5%;
   opacity: 0.4;
@@ -112,17 +116,36 @@ header {
 .nameProduct {
   margin-left: 5px;
   color: black;
+  width: 75%;
 }
 .divInfosProduct {
+  width: 190px;
   background-color: white;
   border-radius: 4px;
+  border: none;
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding: 5px;
   box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 0.8);
 }
+.divNameAndUpdateButton {
+  display: flex;
 
+  justify-content: space-between;
+}
+.updateButton {
+  margin-right: 5px;
+  background-color: black;
+  color: white;
+  border: none;
+
+  border-radius: 4px;
+}
+.updateButton:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
 .divAvailability {
   display: flex;
   gap: 5px;
@@ -138,4 +161,58 @@ header {
 .muchQuantity {
   color: green;
   opacity: 0.6;
+}
+
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/*------ AddProduct page CSS  ---------*/
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+
+.sectionAddProduct {
+  margin: 10%;
+}
+.formAddProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/*------ updateProduct page CSS  ---------*/
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+.sectionUpdatePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  gap: 20px;
+  margin: 10%;
+}
+.titleUpdatePage {
+  font-weight: 700;
+  color: #5c47d2;
+  font-size: 20px;
+}
+.productImageInUpdatePage {
+  height: 200px;
+}
+.divProductInfosUpdatePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid 3px black;
+
+  border-radius: 6px;
+  padding: 5px;
+}
+.formUpdateProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }

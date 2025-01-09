@@ -1,7 +1,10 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
+  const navigate = useNavigate();
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -39,7 +42,17 @@ const Home = () => {
                     className="productImage"
                   />
                   <div className="divInfosProduct">
-                    <p className="nameProduct">{elem.name}</p>
+                    <div className="divNameAndUpdateButton">
+                      <p className="nameProduct">{elem.name}</p>
+                      <button
+                        className="updateButton"
+                        onClick={() => {
+                          navigate(`/update/${elem._id}`);
+                        }}
+                      >
+                        <FontAwesomeIcon icon="fa-solid fa-pencil" />
+                      </button>
+                    </div>
                     <p className="nameProduct">{elem.price} €</p>
 
                     {elem.quantity === 0 && (
