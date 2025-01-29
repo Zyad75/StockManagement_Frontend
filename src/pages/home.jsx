@@ -10,7 +10,9 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/products");
+        const response = await axios.get(
+          "https://site--stockmanagementapp--cszclskmpcqr.code.run/products"
+        );
 
         console.log(response.data);
         setData(response.data);
@@ -73,7 +75,7 @@ const Home = () => {
                           const id = elem._id;
                           try {
                             const response = await axios.delete(
-                              `http://localhost:3000/delete/${id}`
+                              `https://site--stockmanagementapp--cszclskmpcqr.code.run/delete/${id}`
                             );
                             alert(JSON.stringify(response.data));
                             navigate("/");

@@ -19,7 +19,9 @@ const UpdateProduct = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/product/${id}`);
+        const response = await axios.get(
+          `https://site--stockmanagementapp--cszclskmpcqr.code.run/product/${id}`
+        );
 
         console.log(response.data);
         setData(response.data);
@@ -67,7 +69,7 @@ const UpdateProduct = () => {
                 formData.append("quantity", quantity);
                 try {
                   const response = await axios.put(
-                    `http://localhost:3000/update/${id}`,
+                    `https://site--stockmanagementapp--cszclskmpcqr.code.run/update/${id}`,
                     formData,
                     {
                       headers: {

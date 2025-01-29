@@ -24,7 +24,7 @@ const AddProduct = () => {
             formData.append("quantity", quantity);
             try {
               const response = await axios.post(
-                "http://localhost:3000/create",
+                "https://site--stockmanagementapp--cszclskmpcqr.code.run/create",
                 formData,
                 {
                   headers: {
