@@ -25,6 +25,26 @@ function App() {
         <Route path="/addProduct" element={<AddProduct />}></Route>
         <Route path="/update/:id" element={<UpdateProduct />}></Route>
       </Routes>
+      <footer>
+        <p>
+          2024 © Made with{" "}
+          <a href="https://fr.react.dev/" target="blank" className="footer">
+            React
+          </a>{" "}
+          at{" "}
+          <a
+            href="https://www.lereacteur.io/"
+            target="blank"
+            className="footer"
+          >
+            Le Reacteur
+          </a>{" "}
+          by{" "}
+          <a href="https://github.com/Zyad75" target="blank" className="footer">
+            Zyad
+          </a>
+        </p>
+      </footer>
     </Router>
   );
 }

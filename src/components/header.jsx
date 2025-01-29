@@ -18,6 +18,9 @@ const Header = () => {
           <FontAwesomeIcon icon="fa-solid fa-plus" className="iconAddProduct" />
           <p className="textAddProduct">add Product</p>{" "}
         </Link>
+        <Link to={"/addProduct"} className="buttonAddProductResp">
+          <FontAwesomeIcon icon="fa-solid fa-plus" className="iconAddProduct" />{" "}
+        </Link>
       </header>
     </>
   );

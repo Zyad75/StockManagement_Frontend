@@ -6,6 +6,20 @@ body {
 p {
   font-family: "Kanit";
 }
+footer {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+.footer:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.footer {
+  text-decoration: none;
+  color: rgb(65, 2, 86);
+}
 
 /*----------------------------------------------*/
 /*----------------------------------------------*/
@@ -53,6 +67,9 @@ header {
   height: 30px;
   font-family: "Kanit";
 }
+.buttonAddProductResp {
+  display: none;
+}
 
 .buttonAddProduct:hover {
   background-color: #5c47d2;
@@ -72,6 +89,37 @@ header {
   font-size: 26px;
   text-align: center;
 }
+
+/*----- responsive HEADER ------*/
+@media (max-width: 800px) {
+  .titleHeader {
+    font-size: 16px;
+  }
+  .buttonAddProduct {
+    display: none;
+  }
+  .buttonAddProductResp {
+    display: block;
+    color: #5c47d2;
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: solid white 2px;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    height: 30px;
+    font-family: "Kanit";
+  }
+  .buttonAddProductResp:hover {
+    opacity: 0.6;
+  }
+}
+
 /*----------------------------------------------*/
 /*----------------------------------------------*/
 /*------ Home page CSS  ---------*/
