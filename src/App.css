@@ -91,6 +91,14 @@ header {
 }
 
 /*----- responsive HEADER ------*/
+@media (min-width: 769px) and (max-width: 1024px) {
+  .buttonAddProduct {
+    display: flex;
+  }
+  .buttonAddProductResp {
+    display: none;
+  }
+}
 @media (max-width: 800px) {
   .titleHeader {
     font-size: 16px;
@@ -117,6 +125,9 @@ header {
   }
   .buttonAddProductResp:hover {
     opacity: 0.6;
+  }
+  header {
+    gap: 14%;
   }
 }
 
